@@ -1,7 +1,7 @@
 import { Camera, MapPin, Award, TrendingUp, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
-import rosyLogo from "@/assets/rosy-character.png";
+import rosyLogo from "@/assets/rosy-logo.png";
 
 const Profile = () => {
   return (
