@@ -14,7 +14,98 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      profiles: {
+        Row: {
+          avatar_url: string | null
+          bubble_points: number | null
+          created_at: string | null
+          day_streak: number | null
+          email: string
+          email_verified: boolean | null
+          id: string
+          level: number | null
+          trash_collected: number | null
+          updated_at: string | null
+          username: string
+          verification_code: string | null
+          verification_code_expires_at: string | null
+        }
+        Insert: {
+          avatar_url?: string | null
+          bubble_points?: number | null
+          created_at?: string | null
+          day_streak?: number | null
+          email: string
+          email_verified?: boolean | null
+          id: string
+          level?: number | null
+          trash_collected?: number | null
+          updated_at?: string | null
+          username: string
+          verification_code?: string | null
+          verification_code_expires_at?: string | null
+        }
+        Update: {
+          avatar_url?: string | null
+          bubble_points?: number | null
+          created_at?: string | null
+          day_streak?: number | null
+          email?: string
+          email_verified?: boolean | null
+          id?: string
+          level?: number | null
+          trash_collected?: number | null
+          updated_at?: string | null
+          username?: string
+          verification_code?: string | null
+          verification_code_expires_at?: string | null
+        }
+        Relationships: []
+      }
+      scanned_trash: {
+        Row: {
+          created_at: string | null
+          id: string
+          image_url: string | null
+          location_lat: number | null
+          location_lng: number | null
+          points_earned: number | null
+          trash_type: string
+          user_id: string
+          verified: boolean | null
+        }
+        Insert: {
+          created_at?: string | null
+          id?: string
+          image_url?: string | null
+          location_lat?: number | null
+          location_lng?: number | null
+          points_earned?: number | null
+          trash_type: string
+          user_id: string
+          verified?: boolean | null
+        }
+        Update: {
+          created_at?: string | null
+          id?: string
+          image_url?: string | null
+          location_lat?: number | null
+          location_lng?: number | null
+          points_earned?: number | null
+          trash_type?: string
+          user_id?: string
+          verified?: boolean | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "scanned_trash_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never
