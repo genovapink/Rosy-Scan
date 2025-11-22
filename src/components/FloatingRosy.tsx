@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { MessageCircle, X } from "lucide-react";
-import rosyLogo from "@/assets/rosy-character.png";
+import rosyLogo from "@/assets/rosy-logo.png";
 import { Button } from "@/components/ui/button";
 
 const FloatingRosy = () => {

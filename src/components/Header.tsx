@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { Sparkles } from "lucide-react";
-import rosyLogo from "@/assets/rosy-character.png";
+import rosyLogo from "@/assets/rosy-logo.png";
 
 const Header = () => {
   const location = useLocation();
