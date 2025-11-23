@@ -1,3 +1,6 @@
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/388f32fb-7bd4-49be-a54d-511c1be5af5f" />
+
+
 # Welcome to Rosy-Scan
 
 ## Project info
