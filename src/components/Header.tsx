@@ -1,9 +1,15 @@
-import { Link, useLocation } from "react-router-dom";
-import { Sparkles } from "lucide-react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Sparkles, LogOut, User } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { supabase } from "@/integrations/supabase/client";
+import { useEffect, useState } from "react";
+import { toast } from "sonner";
 import rosyLogo from "@/assets/rosy-logo.png";
 
 const Header = () => {
   const location = useLocation();
+  const navigate = useNavigate();
+  const [user, setUser] = useState<any>(null);
   
   const navItems = [
     { path: "/", label: "Home" },
@@ -12,6 +18,30 @@ const Header = () => {
     { path: "/rewards", label: "Rewards" },
     { path: "/profile", label: "Profile" },
   ];
+
+  useEffect(() => {
+    // Get initial session
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setUser(session?.user ?? null);
+    });
+
+    // Listen for auth changes
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      setUser(session?.user ?? null);
+    });
+
+    return () => subscription.unsubscribe();
+  }, []);
+
+  const handleLogout = async () => {
+    const { error } = await supabase.auth.signOut();
+    if (error) {
+      toast.error("Failed to log out");
+    } else {
+      toast.success("Logged out successfully");
+      navigate("/");
+    }
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 border-b border-border">
@@ -41,6 +71,30 @@ const Header = () => {
             </Link>
           ))}
         </nav>
+
+        <div className="flex items-center gap-2">
+          {user ? (
+            <Button
+              onClick={handleLogout}
+              variant="outline"
+              size="sm"
+              className="rounded-full font-quicksand"
+            >
+              <LogOut className="w-4 h-4 md:mr-2" />
+              <span className="hidden md:inline">Logout</span>
+            </Button>
+          ) : (
+            <Button
+              onClick={() => navigate("/auth")}
+              variant="outline"
+              size="sm"
+              className="rounded-full font-quicksand"
+            >
+              <User className="w-4 h-4 md:mr-2" />
+              <span className="hidden md:inline">Login</span>
+            </Button>
+          )}
+        </div>
 
         <div className="md:hidden flex items-center gap-2">
           {navItems.map((item) => (

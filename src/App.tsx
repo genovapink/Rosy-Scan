@@ -10,6 +10,8 @@ import Missions from "./pages/Missions";
 import Map from "./pages/Map";
 import Rewards from "./pages/Rewards";
 import Profile from "./pages/Profile";
+import Auth from "./pages/Auth";
+import Scan from "./pages/Scan";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +30,8 @@ const App = () => (
             <Route path="/map" element={<Map />} />
             <Route path="/rewards" element={<Rewards />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/auth" element={<Auth />} />
+            <Route path="/scan" element={<Scan />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
