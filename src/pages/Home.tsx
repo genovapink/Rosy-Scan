@@ -1,9 +1,12 @@
 import { Scan, Sparkles, Gift } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 import BadgeCard from "@/components/BadgeCard";
 import rosyHero from "@/assets/rosy-hero.png";
 
 const Home = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-primary/10">
       {/* Hero Section */}
@@ -17,6 +20,7 @@ const Home = () => {
               Temukan sampah di dunia nyata, scan, dapatkan poin, dan bantu Rosy membuat bumi lebih bersih.
             </p>
             <Button 
+              onClick={() => navigate("/scan")}
               size="lg" 
               className="rounded-full bg-gradient-to-r from-primary to-secondary hover:scale-105 text-foreground font-quicksand font-bold text-lg px-8 py-6 shadow-[var(--shadow-card)] transition-all"
             >
