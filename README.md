@@ -62,3 +62,5 @@ Sistem badge & rewards direncanakan untuk versi berikutnya.
 Menampilkan lokasi bersih dan area yang membutuhkan tindakan.
 
 Real-world environmental contribution.
+
+ini masih dalam pengembangan dan akan ada di Phase 2
