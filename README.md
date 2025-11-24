@@ -2,65 +2,22 @@
 
 
 # Welcome to Rosy-Scan
+About Rosy
 
-## Project info
-Rosy-Scan
+Rosy adalah eco-assistant cerdas yang membantu masyarakat mengelola sampah secara benar, menyenangkan, dan bermanfaat. Rosy tidak hanya memindai sampah, tetapi juga memberikan edukasi, panduan, dan reward nyata bagi setiap aksi peduli lingkungan.
 
-AI-powered Eco-Clean App for Real-World Trash Scanning
+Dengan teknologi AI Image Recognition, Rosy mampu mengenali apakah sebuah sampah organik atau non-organik, lalu memberi tahu cara memilahnya dengan benar. Setelah sampah dipilah, pengguna diarahkan untuk mengumpulkan dan menyetorkannya ke Bank Sampah resmi yang ditampilkan pada peta real-time (bukan dummy map). Setiap titik bank sampah yang terhubung akan muncul langsung di peta aplikasi.
 
-Rosy-Scan adalah aplikasi eco-clean yang menggunakan teknologi AI Vision, Gamification, dan Real-World Scanning untuk membantu pengguna mendeteksi sampah di dunia nyata, mendapatkan poin, serta mendukung gaya hidup ramah lingkungan.
+Setelah pengguna menyetor sampah di titik Bank Sampah terdekat, Rosy memberikan 50 poin untuk setiap setoran yang divalidasi. Poin tersebut dapat ditukarkan dengan hadiah:
 
-Aplikasi ini menampilkan karakter maskot lucu bernama Rosy, yang menjadi pendamping pengguna saat melakukan misi kebersihan.
+150 poin → Stiker Rosy
 
-# Tujuan Project
+300 poin → NFT Rosy eksklusif
 
-Rosy-Scan dikembangkan sebagai aplikasi edukatif untuk:
+320 poin → Badge Eco-Warrior, yang akan tampil di profil pengguna
+(Profil dibuat menggunakan login akun Gmail untuk keamanan & personalisasi)
 
-Mengajarkan kebersihan dan kepedulian lingkungan.
+Rosy diciptakan untuk membuat kegiatan memilah sampah menjadi lebih mudah, lebih terarah, dan lebih seru, sekaligus membantu masyarakat menciptakan lingkungan yang lebih bersih dengan sistem reward yang nyata dan transparan.
 
-Menggunakan AI untuk mendeteksi jenis sampah.
-
-Menjadikan aktivitas bersih-bersih terasa fun melalui sistem poin.
-
-Memberikan pengalaman mobile-friendly yang ringan dan cepat.
-
-# Fitur Utama
- 1. AI Trash Detection (Google Vision AI)
-
-Pengguna dapat memfoto sampah.
-
-AI akan menganalisis gambar dan mengidentifikasi kategori sampah.
-
-Meningkatkan akurasi edukasi dan pengalaman pengguna.
-
- 2. Email Authentication (Resend API)
-
-Login aman melalui email verification.
-
-Aktivasi akun menggunakan Resend API.
-
-Proses login cepat, tanpa login sosial atau password.
-
- 3. Beautiful UI + Rosy Mascot
-
-Tampilan soft pastel dan ramah anak.
-
-Animasi halus untuk Rosy.
-
-Tampilan hero section custom (kamu mengganti ilustrasi default Lovable).
-
- 4. Gamification: Missions & Rewards
-
-Misi harian: scan, bersihkan, laporkan.
-
-Poin ditambahkan setelah scan berhasil.
-
-Sistem badge & rewards direncanakan untuk versi berikutnya.
-
- 5. Map Integration (Future Update)
-
-Menampilkan lokasi bersih dan area yang membutuhkan tindakan.
-
-Real-world environmental contribution.
-
-ini masih dalam pengembangan dan akan ada di Phase 2
+Scan. Pilah. Setor. Dapatkan Reward.
+Bersama Rosy, menjaga bumi jadi lebih menyenangkan.
